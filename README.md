@@ -1,2 +1,2 @@
 # codepath-prework
-Codepath pre-work project for ios development course
+Codepath ios102 Pre-work: Introduce Yourself
