@@ -64,7 +64,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-Ei-LYA">
-                                <rect key="frame" x="30" y="372" width="314" height="32"/>
+                                <rect key="frame" x="30" y="403" width="314" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="First"/>
@@ -130,6 +130,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-qI-iOi">
+                                <rect key="frame" x="95" y="350" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hobby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swg-6d-XVf">
+                                <rect key="frame" x="29" y="339" width="117" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,6 +151,7 @@
                     <connections>
                         <outlet property="colorSegmentedControl" destination="k05-hC-TO7" id="bdL-DG-ExL"/>
                         <outlet property="firstNameTextField" destination="cRZ-3s-HXd" id="SlL-bc-psK"/>
+                        <outlet property="hobbyTextField" destination="ENL-qI-iOi" id="aAY-mS-w8A"/>
                         <outlet property="lastNameTextField" destination="all-pi-tYV" id="vPe-GX-mBh"/>
                         <outlet property="morePetsStepper" destination="8ta-hU-lpK" id="Bu2-Be-ooV"/>
                         <outlet property="morePetsSwitch" destination="psk-oe-0bJ" id="Gms-vB-hAr"/>

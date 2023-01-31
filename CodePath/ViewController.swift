@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var schoolNameTextField: UITextField!
-    
+    @IBOutlet weak var hobbyTextField: UITextField!
     @IBOutlet weak var yearSegmentedControl:
     UISegmentedControl!
     @IBOutlet weak var colorSegmentedControl :UISegmentedControl!
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                 wantMorePets = "I am not a pet person!"}
         }
     
-          let introduction = "My name is \(firstNameTextField.text!) \(lastNameTextField.text!) and I attend \(schoolNameTextField.text!). I am currently in my \(year!) year and I own \(petInfo). \(wantMorePets)"
+          let introduction = "My name is \(firstNameTextField.text!) \(lastNameTextField.text!) and I attend \(schoolNameTextField.text!). I am currently in my \(year!) year. \(hobbyTextField.text!) is my hobby. I own \(petInfo). \(wantMorePets)"
           
           // Creates the alert where we pass in our message, which our introduction.
           let alertController = UIAlertController(title: "My Introduction", message: introduction, preferredStyle: .alert)
