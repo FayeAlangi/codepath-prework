@@ -2,7 +2,7 @@
 
 ### App Description
 
-This app allows users to create an intorduction
+This app allows students to create an intorduction based on personal info.
 
 ### App Walk-though
 
