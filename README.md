@@ -4,7 +4,7 @@
 
 This app allows students to create an intorduction based on personal info.
 
-### App Walk-though
+### App Walk-through
 
 <img src="Codepath-Walkthrough.gif" width=300><br>
 
