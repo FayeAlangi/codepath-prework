@@ -16,16 +16,32 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var yearSegmentedControl:
     UISegmentedControl!
+    @IBOutlet weak var colorSegmentedControl :UISegmentedControl!
     @IBOutlet weak var numberOfPetsLabel: UILabel!
-    
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     }
     @IBAction func stepperDidChange(_ sender: UIStepper){
         numberOfPetsLabel.text="\(Int(sender.value))"
+    }
+    @IBAction func colorSegmentDidChange(_ sender:UISegmentedControl){
+        let background_color=colorSegmentedControl.titleForSegment(at: colorSegmentedControl.selectedSegmentIndex)
+        switch background_color!{
+        case "Yellow":
+            self.view.backgroundColor = UIColor(hue: 0.1333, saturation: 0.32, brightness: 1, alpha: 1.0)
+        case "Green":
+            self.view.backgroundColor = UIColor(hue: 0.275, saturation: 0.12, brightness: 0.97, alpha: 1.0)
+        case "Blue":
+            self.view.backgroundColor = UIColor(hue: 0.5833, saturation: 0.23, brightness: 1, alpha: 1.0)
+        case "Reset":
+            self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
+        default:
+            self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
+        }
     }
     @IBAction func introduceSelfDidTapped(_ sender: UIButton) {
           
@@ -34,8 +50,31 @@ class ViewController: UIViewController {
           
           // Creating a variable of type string, that holds an introduction. The introduction interpolates the values from the text fields provided.
           // Currently we can only present the information in a print statement. However, this lets us verify that our app is printing out what is intended!
-          let introduction = "My name is \(firstNameTextField.text!) \(lastNameTextField.text!) and I attend \(schoolNameTextField.text!).I am currently in my \(year!) year and I own \(numberOfPetsLabel.text!) dogs. It is \(morePetsSwitch.isOn) that I want more pets."
-          
+       
+        var petInfo=""
+        switch numberOfPetsLabel.text{
+        case "0":
+            petInfo = "no pet"
+        case "1":
+            petInfo = numberOfPetsLabel.text! + " pet"
+        default:
+            petInfo = numberOfPetsLabel.text! + " pets"
+        }
+        var wantMorePets=""
+        if morePetsSwitch.isOn{
+            if numberOfPetsLabel.text! != "0"{
+                wantMorePets = "I love to have more pets!"}
+            else{
+                wantMorePets = "I love to have a pet one day!"
+            }
+        }else{
+            if numberOfPetsLabel.text! != "0"{
+                wantMorePets = "No more pets for me!"}
+            else{
+                wantMorePets = "I am not a pet person!"}
+        }
+    
+          let introduction = "My name is \(firstNameTextField.text!) \(lastNameTextField.text!) and I attend \(schoolNameTextField.text!). I am currently in my \(year!) year and I own \(petInfo). \(wantMorePets)"
           
           // Creates the alert where we pass in our message, which our introduction.
           let alertController = UIAlertController(title: "My Introduction", message: introduction, preferredStyle: .alert)
